@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>proxy.header.sts.preload</title>
+    <title>ui.path</title>
 
     
     <link href="/css/theDocs.all.min.css" rel="stylesheet">
@@ -216,7 +216,7 @@
       
         <li><a href="https://fabiolb.net/ref/proxy.header.sts.maxage/">proxy.header.sts.maxage</a></li>
       
-        <li><a class="active" href="https://fabiolb.net/ref/proxy.header.sts.preload/">proxy.header.sts.preload</a></li>
+        <li><a href="https://fabiolb.net/ref/proxy.header.sts.preload/">proxy.header.sts.preload</a></li>
       
         <li><a href="https://fabiolb.net/ref/proxy.header.sts.subdomains/">proxy.header.sts.subdomains</a></li>
       
@@ -312,7 +312,7 @@
       
         <li><a href="https://fabiolb.net/ref/ui.color/">ui.color</a></li>
       
-        <li><a href="https://fabiolb.net/ref/ui.path/">ui.path</a></li>
+        <li><a class="active" href="https://fabiolb.net/ref/ui.path/">ui.path</a></li>
       
         <li><a href="https://fabiolb.net/ref/ui.routingtable.source.host/">ui.routingtable.source.host</a></li>
       
@@ -364,17 +364,11 @@
 
       
       <section>
-        <h2>proxy.header.sts.preload</h2>
-        <p><code>proxy.header.sts.preload</code> instructs HSTS to include the preload directive.
-When set to true, the &lsquo;preload&rsquo; option will be added to the
-Strict-Transport-Security header.</p>
-<p>Sending the preload directive from your site can have PERMANENT CONSEQUENCES
-and prevent users from accessing your site and any of its subdomains if you
-find you need to switch back to HTTP. Please read the details at
-<a href="https://hstspreload.org/#removal">https://hstspreload.org/#removal</a>
-before sending the header with &ldquo;preload&rdquo;.</p>
+        <h2>ui.path</h2>
+        <p><code>ui.path</code> configures the base path for the UI/API. This allows serving
+the admin UI behind a reverse proxy at a sub-path, e.g. <code>/fabio</code>.</p>
 <p>The default is</p>
-<pre><code>proxy.header.sts.preload = false
+<pre><code>ui.path =
 </code></pre>
 
         
